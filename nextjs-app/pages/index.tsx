@@ -31,7 +31,7 @@ export default function Home() {
         )}
 
         <div style={{marginTop: '100px'}}>
-          <Link href="/failing"><button>Try rendering component server side...</button></Link>
+          <Link href="/failing"><button>Server side render, Try rendering component server side...</button></Link>
         </div>
       </div>
     </div>

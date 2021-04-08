@@ -23,7 +23,7 @@ export default function Home() {
          <TestComponent />
 
         <div style={{marginTop: '100px'}}>
-          <button onClick={() => window.location.reload()}>Will work on client but try refreshing and server will fail</button>
+          <button onClick={() => window.location.reload()}>Refresh, Note: this will work on browser, so try refreshing and server will fail</button>
         </div>
       </div>
 
