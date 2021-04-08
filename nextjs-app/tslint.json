@@ -1,0 +1,47 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier", "tslint-immutable"],
+  "jsEnable": true,
+  "jsRules": true,
+  "linterOptions": {
+    "exclude": [
+      "./*.js",
+      "**/node_modules/**",
+      "**/types.gen.ts"
+    ]
+  },
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": true,
+    "interface-name": [true, "never-prefix"],
+    "no-implicit-dependencies": [true, "dev", ["aws-lambda", "aws-sdk", "@app" ]],
+    "no-submodule-imports": false,
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    },
+    "no-var-keyword": true,
+    "no-parameter-reassignment": true,
+    "typedef": [false, "call-signature"],
+    "member-access": { "severity": "warning" },
+
+    "readonly-keyword": false,
+    "readonly-array": false,
+    "no-let": false,
+    "no-object-mutation": false,
+    "no-delete": true,
+    "no-method-signature": true,
+
+    "no-this": false,
+    "no-class": false,
+    "no-mixed-interface": false,
+    "no-expression-statement": [
+      false,
+      {
+        "ignore-prefix": ["console.", "process.exit"]
+      }
+    ],
+    "no-if-statement": false,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"],
+    "object-literal-sort-keys": false
+  }
+}
